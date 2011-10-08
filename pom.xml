@@ -16,18 +16,35 @@
     </dependency>
   </dependencies>
   <build>
-     <extensions>
-        <extension>
-    <groupId>org.kuali.maven</groupId>
-    <artifactId>kuali-wagon-s3</artifactId>
-    <version>1.0.22</version>
-        
-  <!--
-           <groupid>org.springframework.build.aws</groupid>
-              <artifactid>org.springframework.build.aws.maven</artifactid>
-              <version>3.0.0.RELEASE</version>
-      -->
-          </extension>
-      </extensions>
+    <extensions>
+      <extension>
+        <groupId>org.kuali.maven</groupId>
+        <artifactId>kuali-wagon-s3</artifactId>
+        <version>1.0.22</version>
+      </extension>
+    </extensions>
   </build>
+  <distributionManagement>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <uniqueVersion>true</uniqueVersion>
+      <id>repo.builddoctor.com.release</id>
+      <name>Release Repo</name>
+      <url>s3://repo.build-doctor.com/maven/releaes</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>repo.builddoctor.com.snapshot</id>
+      <name>Snapshot Repo</name>
+      <url>s3://repo.build-doctor.com/maven/snapshots</url>
+      <layout>default</layout>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
