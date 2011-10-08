@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.builddoctor</groupId>
+  <artifactId>s3demo</artifactId>
+  <packaging>jar</packaging>
+  <version>0.1-SNAPSHOT</version>
+  <name>s3demo</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+     <extensions>
+        <extension>
+    <groupId>org.kuali.maven</groupId>
+    <artifactId>kuali-wagon-s3</artifactId>
+    <version>1.0.22</version>
+        
+  <!--
+           <groupid>org.springframework.build.aws</groupid>
+              <artifactid>org.springframework.build.aws.maven</artifactid>
+              <version>3.0.0.RELEASE</version>
+      -->
+          </extension>
+      </extensions>
+  </build>
+</project>

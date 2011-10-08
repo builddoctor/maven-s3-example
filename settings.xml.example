@@ -1,0 +1,17 @@
+<settings>
+ ...
+ <servers>
+    <server>
+      <id>kuali.snapshot</id>
+      <username>[AWS Access Key ID]</username>
+      <password>[AWS Secret Access Key]</password>
+    </server>
+    <server>
+      <id>kuali.release</id>
+      <username>[AWS Access Key ID]</username>
+      <password>[AWS Secret Access Key]</password>
+    </server>
+  </servers>
+  ...
+</settings>
+
